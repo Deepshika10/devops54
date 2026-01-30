@@ -1,12 +1,10 @@
+
 import java.util.*;
 public class binary{
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        int[] arr=new int[n];
-        for(int i=0;i<n;i++){
-            arr[i]=sc.nextInt();
-        }
+        int n=5;
+        int arr[]={1,2,3,4,5};
         int left=0;
         int right=n-1;
         int num=2;
@@ -19,9 +17,11 @@ public class binary{
                 }
                 else if(num<arr[mid]){
                     right--;
+                    mid++;
                 }
                 else{
                     left++;
+                    mid--;
                 }
             }
         }
